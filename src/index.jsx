@@ -13,7 +13,7 @@ const render = (Component) => {
     </AppContainer>,
     document.getElementById('react-app-root')
   );
-};
+};  
 
 render(App);
 
