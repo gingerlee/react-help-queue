@@ -1,9 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function TicketDetail() {
+function TicketDetail(props) {
   return (
-    <h2>Ticket Details will be visable here soon!</h2>
+    <div>
+      <hr />
+      <h1>{props.selectedTicket.names} - {props.selectedTicket.location}</h1>
+      <h2>Submitted {props.selectedTicket.formattedWaitTime} ago</h2>
+      <h4><em>{props.selectedTicket.issue}</em></h4>
+      <hr />
+    </div>
+
   );
 }
 
