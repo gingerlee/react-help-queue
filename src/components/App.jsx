@@ -51,14 +51,14 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path='/' render={()=>
-              <TicketList ticketList={this.props.masterTicketList} /> } />
+            <TicketList ticketList={this.props.masterTicketList} /> } />
           <Route path='/newticket' render={()=>
-              <NewTicketControl />} />
+            <NewTicketControl />} />
           <Route path='/admin' render={(props)=>
             <Admin ticketList={this.props.masterTicketList}
-                   currentRouterPath={props.location.pathname}
-                   onTicketSelection={this.handleChangingSelectedTicket}
-                   selectedTicket={this.state.selectedTicket} /> } />
+              currentRouterPath={props.location.pathname}
+              onTicketSelection={this.handleChangingSelectedTicket}
+              selectedTicket={this.state.selectedTicket} /> } />
           <Route component={Error404} />
         </Switch>
       </div>
@@ -67,8 +67,8 @@ class App extends React.Component {
 }
 const mapStateToProps = state => {
   return {
-    masterTicketList: state
-  }
-}
+    masterTicketList: state.masterTicketList
+  };
+};
 
 export default withRouter(connect(mapStateToProps)(App));
