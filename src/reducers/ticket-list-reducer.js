@@ -10,7 +10,8 @@ export default (state = {}, action) => {
         location: location,
         issue: issue,
         timeOpen: timeOpen,
-        id: id
+        id: id,
+        formattedWaitTime: formattedWaitTime
       }
     });
     return newState;
@@ -21,6 +22,7 @@ export default (state = {}, action) => {
       [id]: newTicket
     });
     return newState;
+
   default:
     return state;
   }
