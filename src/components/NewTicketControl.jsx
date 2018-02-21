@@ -20,9 +20,10 @@ class NewTicketControl extends React.Component {
   render(){
     let currentlyVisibleContent = null;
     if (this.state.formVisibleOnPage) {
-      currentlyVisibleContent = <NewTicketForm/>;
+      currentlyVisibleContent = <NewTicketForm />;
     } else {
-      currentlyVisibleContent = <ConfirmationQuestions onTroubleshootingConfirmation={this.handleTroubleshootingConfirmation} />;
+      currentlyVisibleContent = <ConfirmationQuestions
+        onTroubleshootingConfirmation={this.handleTroubleshootingConfirmation} />;
     }
     return (
       <div>
