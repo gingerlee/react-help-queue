@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import { v4 } from 'uuid';
 import constants from './../constants';
 const { c } = constants;
+import { addTicket } from './../actions';
 
 function NewTicketForm(props){
-  console.log(props);
   let _names = null;
   let _location = null;
   let _issue = null;
