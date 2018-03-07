@@ -6,7 +6,7 @@ function ConfirmationQuestions(props) {
     <div>
       <p>Have you gone through all the steps on the Learn How to Program debugging lesson?</p>
 
-      <button onClick={props.onTroubleshootingConfirmation}>Yea, sure, whatever...</button>
+      <button onClick={props.onTroubleshootingConfirmation}>Yea!</button>
     </div>
   );
 }
